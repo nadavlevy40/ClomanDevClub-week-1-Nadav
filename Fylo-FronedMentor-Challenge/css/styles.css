@@ -17,7 +17,7 @@ body {
   margin: 0;
 }
 
-body .main {
+.main {
   margin: auto;
   width: 1440px;
   display: -webkit-box;
@@ -31,7 +31,8 @@ body .main {
           justify-content: center;
 }
 
-body .main .container {
+
+.container {
   width: 64%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +45,7 @@ body .main .container {
           justify-content: space-between;
 }
 
-body .main .container .left {
+ .left-container {
   position: relative;
   top: -10px;
   width: 38%;
@@ -54,20 +55,19 @@ body .main .container .left {
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
-body .main .container .left .content {
+ .content {
   padding: 40px 40px;
   width: 55%;
 }
 
-body .main .container .left .content .logo {
+.logo {
   margin-bottom: 30px;
 }
 
-body .main .container .left .content .logo img {
+ .logo img {
   width: 135px;
 }
-
-body .main .container .left .content .features-box {
+ .features-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,8 +75,13 @@ body .main .container .left .content .features-box {
       -ms-flex-align: center;
           align-items: center;
 }
-
-body .main .container .left .content .features-box .features {
+  #labelUpload{
+    color: white;
+  }
+ #fileUpload{
+  display: none;
+ }
+ .features {
   background-color: #0c122c;
   height: 48px;
   width: 48px;
@@ -93,7 +98,9 @@ body .main .container .left .content .features-box .features {
   margin-right: 15px;
 }
 
-body .main .container .right {
+
+
+ .right-container {
   width: 59%;
   background-color: #1d2c67;
   border-radius: 10px;
@@ -102,8 +109,7 @@ body .main .container .right {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
 }
-
-body .main .container .right .load-box {
+ .load-box {
   padding: 25px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,7 +122,7 @@ body .main .container .right .load-box {
   position: relative;
 }
 
-body .main .container .right .load-box .storage-left {
+ .storage-left {
   position: absolute;
   right: 40px;
   top: -30%;
@@ -125,7 +131,7 @@ body .main .container .right .load-box .storage-left {
   border-radius: 10px;
 }
 
-body .main .container .right .load-box .storage-left::after {
+ .storage-left::after {
   content: "";
   display: block;
   width: 0;
@@ -138,7 +144,7 @@ body .main .container .right .load-box .storage-left::after {
   top: 70%;
 }
 
-body .main .container .right .load-box .storage-left span {
+ .storage-left span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,23 +157,23 @@ body .main .container .right .load-box .storage-left span {
   text-transform: uppercase;
 }
 
-body .main .container .right .load-box .storage-left span .number {
+ .storage-left span .number {
   font-size: 3em;
   color: #0c122c;
   padding-right: 10px;
 }
 
-body .main .container .right .load-box .usage-storage {
+ .load-box .usage-storage {
   color: #dddbff;
   padding: 15px 0;
   font-size: 14px;
 }
 
-body .main .container .right .load-box .usage-storage .gb {
+ .load-box .usage-storage .gb {
   font-weight: 700;
 }
 
-body .main .container .right .load-box .load {
+.load-box .load {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,7 +185,7 @@ body .main .container .right .load-box .load {
       flex-wrap: wrap;
 }
 
-body .main .container .right .load-box .load .load-bar {
+ .load-bar {
   width: 100%;
   height: 20px;
   background: #0c122c;
@@ -187,7 +193,7 @@ body .main .container .right .load-box .load .load-bar {
   overflow: hidden;
 }
 
-body .main .container .right .load-box .load .load-bar .bar {
+.bar {
   width: 70%;
   height: 14px;
   z-index: 14;
@@ -205,7 +211,7 @@ body .main .container .right .load-box .load .load-bar .bar {
           animation-timing-function: linear;
 }
 
-body .main .container .right .load-box .load .load-bar .bar::before {
+.bar::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -217,7 +223,7 @@ body .main .container .right .load-box .load .load-bar .bar::before {
   border-radius: 100%;
 }
 
-body .main .container .right .load-box .load span {
+ .load span {
   color: #dddbff;
   padding: 10px 0;
   font-weight: 700;
@@ -261,10 +267,10 @@ body .main .container .right .load-box .load span {
 }
 
 @media (max-width: 1030px) {
-  body .main {
+   .main {
     width: 100%;
   }
-  body .main .container {
+   .container {
     width: 85%;
   }
 }
@@ -274,34 +280,34 @@ body .main .container .right .load-box .load span {
     background-image: url(/assets/bg-mobile.png);
     background-size: cover;
   }
-  body .main {
+  .main {
     width: 85%;
   }
-  body .main .container {
+  .container {
     width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body .main .container .left {
+   .left-container {
     width: 100%;
     top: 0;
   }
-  body .main .container .right {
+  .right-container {
     margin-top: 20px;
     width: 100%;
     top: 0;
   }
-  body .main .container .right .load-box {
+  .load-box {
     padding-bottom: 30px;
   }
-  body .main .container .right .load-box .storage-left {
+ .storage-left {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     right: 0;
     top: 85%;
   }
-  body .main .container .right .load-box .storage-left::after {
+  .storage-left::after {
     display: none;
   }
 }
